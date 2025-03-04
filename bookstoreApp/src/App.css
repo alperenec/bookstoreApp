@@ -1,42 +1,207 @@
-#root {
-  max-width: 1280px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e6f3ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.bookForm {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+}
+
+.bookForm .subtitle.is-3 {
+  color: #1e90ff;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.bookForm .field-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bookForm .field {
+  flex: 1;
+  margin-bottom: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.bookForm .field label.label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  display: block;
 }
 
-.card {
-  padding: 2em;
+.bookForm input {
+  border: 2px solid #4a90e2;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.bookForm input:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+.bookForm .button.is-primary {
+  background-color: #4CAF50;
+  border: none;
+  padding: 14px 26px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #ffffff;
+}
+
+.bookForm .button.is-primary:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.bookList .book-item .book-cost {
+  margin-bottom: 5px;
+}
+
+.bookList {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+.bookList .panel {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookList .book-item {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.bookList .book-title {
+  background-color: #e0f7ff;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bookList .book-author {
+  background-color: #fff3e6;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.bookList .book-cost {
+  background-color: #e8f5e9;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.bookList .button.is-danger {
+  background-color: #ff4040;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  width: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bookList .button.is-danger:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.listHeader {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listHeader .title.is-3 {
+  color: #1e90ff;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.listHeader .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.listHeader input {
+  border: 2px solid #4a90e2;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listHeader input:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+.listHeader input::placeholder {
+  color: #333;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.bookPrice {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #1e90ff;
+  font-weight: 600;
 }
